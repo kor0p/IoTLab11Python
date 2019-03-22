@@ -16,25 +16,25 @@ class SecuritiesManager:
     def sortByPrice(securities, descending=False):
         return sorted(securities, key=lambda security: security.pricePerUnit, reverse=descending)
 
-    @staticmethod
-    def sortByPriceAscending(securities):
-        return SecuritiesManager.sortByPrice(securities)
+    @classmethod
+    def sortByPriceAscending(cls,securities):
+        return cls.sortByPrice(securities)
 
-    @staticmethod
-    def sortByPriceDescending(securities):
-        return SecuritiesManager.sortByPrice(securities, True)
+    @classmethod
+    def sortByPriceDescending(cls,securities):
+        return cls.sortByPrice(securities, True)
 
     @staticmethod
     def sortByDuration(securities, descending=False):
         return sorted(securities, key=lambda security: security.duration, reverse=descending)
 
-    @staticmethod
-    def sortByDurationAscending(securities):
-        return SecuritiesManager.sortByDuration(securities)
+    @classmethod
+    def sortByDurationAscending(cls,securities):
+        return cls.sortByDuration(securities)
 
-    @staticmethod
-    def sortByDurationDescending(securities):
-        return SecuritiesManager.sortByDuration(securities, True)
+    @classmethod
+    def sortByDurationDescending(cls,securities):
+        return cls.sortByDuration(securities, True)
 
     # return [security for security in self.securities if security.pricePerUnit == price]
 
